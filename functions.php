@@ -22,10 +22,15 @@ register_nav_menus(array(
 add_action('after_setup_theme', 'my_custom_theme_setup');
 
 
+// WordPress Favicon überschreiben
+function custom_admin_favicon() {
+    echo '<link rel="icon" type="image/svg+xml" href="' . get_template_directory_uri() . '/img/my-favicon/favicon.svg" />';
+    echo '<link rel="alternate icon" href="' . get_template_directory_uri() . '/img/my-favicon/favicon-96x96.png" />';
+}
+add_action('admin_head', 'custom_admin_favicon');
 
-
-function my_custom_theme_enqueue_styles() {
     // Enqueue the main stylesheet
+function my_custom_theme_enqueue_styles() {
     wp_enqueue_style('my-custom-theme-style', get_stylesheet_uri());
 }
 add_action('wp_enqueue_scripts', 'my_custom_theme_enqueue_styles');
