@@ -39,9 +39,10 @@
    - Kommentare nach Bereich (Header, Menü, Footer, Content)
    - Reset/Normalisierung einfügen
    - Browser-natives Layout
-4.2. **CSS & Header**
+4.2. **CSS für Header**
    - Header & Navigation stylen
    - Responsive & Retina berücksichtigen
+   - SEO beachten
 4.3. **Template-Hierarchie**
    - `front-page.php`
    - `page.php`

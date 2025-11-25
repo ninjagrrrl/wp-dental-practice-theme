@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<h1>Für die ganze Familie</h1>
+<h1>Ihr Zahnarzt in Berlin-Wedding</h1>
 
 <?php
     while(have_posts()) {

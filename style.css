@@ -8,3 +8,80 @@ License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
 
+
+/*!SECTION CSS-Reset --> Browser-Normalisierung */
+   
+/*!SECTION Globale Variablen (Farben, Spacing, Typography) */
+
+  /* Fonts */
+  @font-face {
+    font-family: 'JosefineSans';
+    src: url('assets/fonts/JosefineSans/JosefinSans-Light.woff2') format('woff2'),
+         url('assets/fonts/JosefineSans/JosefinSans-Light.woff') format('woff');
+    font-weight: Light;
+    font-style: normal;
+  }
+
+    @font-face {
+    font-family: 'AvenirNextCyr';
+    src: url('assets/fonts/AvenirNextLight/AvenirNextCyr-Light.woff2') format('woff2'),
+         url('assets/fonts/AvenirNextLight/AvenirNextCyr-Light.woff') format('woff');
+    font-weight: Light;
+    font-style: normal;
+  }
+
+  /* Farben */
+  :root {
+    --color-bg: #1F2769;
+    --color-text: #F4F7FA;
+
+  }
+
+  /* Typografie */
+
+  /* Abstände */
+
+  /* Layout */
+
+
+
+/*!SECTION Base Styles (HTML Tags, Body, Links, Images */
+
+/* Body */
+
+body {
+    font-family: 'AvenirNextCyr', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    margin: 0;
+    padding: 0;
+}
+
+/* Images */
+
+img.custom-logo {
+    width: auto;
+    height: 150px;
+    max-width: 100%;
+}
+
+
+/*!SECTION Layout: Header, Nav, Footer, Grids */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-bg);
+    font-family: 'AvenirNextCyr', sans-serif;
+
+}
+
+/*!SECTION Components (Buttons, Cards, Forms) */
+
+/*!SECTION Pages (Startseite, Team, Leistungen) */
+
+/*!SECTION Utilities (kleine Helfer-Klassen) */
