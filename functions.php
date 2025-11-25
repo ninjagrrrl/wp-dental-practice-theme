@@ -22,7 +22,7 @@ function my_custom_theme_setup() {
 
 // Custom favicon for admin area
 function custom_admin_favicon() {
-    echo '<link rel="icon" type="image/x-icon" href="' . get_template_directory_uri() . '/img/my-favicon/favicon.ico" />';
+    echo '<link rel="icon" type="image/png" href="' . get_template_directory_uri() . '/assets/img/favicon/favicon-backend.png" />';
 }
 
 add_action('admin_head', 'custom_admin_favicon');

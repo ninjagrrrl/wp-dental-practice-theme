@@ -10,7 +10,23 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 
 /*!SECTION CSS-Reset --> Browser-Normalisierung */
-   
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: var(--font-body);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 /*!SECTION Globale Variablen (Farben, Spacing, Typography) */
 
   /* Fonts */
@@ -32,17 +48,27 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
   /* Farben */
   :root {
-    --color-bg: #1F2769;
-    --color-text: #F4F7FA;
-
-  }
+    --color-bg: #ffffff;
+    --color-primary: #1f2769;
+    --color-text: #1a1a1a;
+    --color-text-light: #ffffff;
 
   /* Typografie */
+    --font-base: 'AvenirNextCyr', sans-serif;
+    --font-size-base: 1rem;
+    --line-height-base: 1.6;
 
   /* Abstände */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
 
   /* Layout */
-
+    --max-width: 1200px;
+    --header-height: 80px;
+  }
 
 
 /*!SECTION Base Styles (HTML Tags, Body, Links, Images */
@@ -50,13 +76,17 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 /* Body */
 
 body {
-    font-family: 'AvenirNextCyr', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
+    font-family: var(--font-base);
+    font-size: var(--font-size-base);
     color: var(--color-text);
+    line-height: var(--line-height-base);
     background-color: var(--color-bg);
     margin: 0;
     padding: 0;
+}
+
+body.admin-bar {
+    margin-top: -32px; /* korrigiert Safari Rendering-Bug in der WP-Admin Bar */
 }
 
 /* Images */
@@ -65,19 +95,37 @@ img.custom-logo {
     width: auto;
     height: 150px;
     max-width: 100%;
+    display: block;
 }
 
+/* Links */
+a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    list-style-type: none;
+  }
 
 /*!SECTION Layout: Header, Nav, Footer, Grids */
 
 header {
+    padding: 0 var(--space-lg);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: var(--color-bg);
-    font-family: 'AvenirNextCyr', sans-serif;
+    background-color: var(--color-primary);
 
+
+
+}
+
+.header-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    position: relative; /* oder fixed, wenn du willst */
+    top: 0;
 }
 
 /*!SECTION Components (Buttons, Cards, Forms) */
