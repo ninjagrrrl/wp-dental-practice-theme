@@ -22,10 +22,21 @@ function my_custom_theme_setup() {
 
 // Custom favicon for admin area
 function custom_admin_favicon() {
-    echo '<link rel="icon" type="image/png" href="' . get_template_directory_uri() . '/assets/img/favicon/favicon-backend.png" />';
+    echo '<link rel="icon" type="image/png" href="' . get_template_directory_uri() . '/assets/img/favicon/favicon-backend2.png" />';
 }
-
 add_action('admin_head', 'custom_admin_favicon');
+
+
+function custom_frontend_favicons() {
+  $template_uri = get_template_directory_uri();
+
+  echo '<link rel="icon" type="image/png" sizes="16x16" href="' . $template_uri . '/assets/img/favicon/favicon-16.png">';
+  echo '<link rel="icon" type="image/png" sizes="32x32" href="' . $template_uri . '/assets/img/favicon/favicon-32.png">';
+  echo '<link rel="icon" type="image/png" sizes="32x32" href="' . $template_uri . '/assets/img/favicon/favicon-64.png">';
+  echo '<link rel="icon" type="image/svg+xml" href="' . $template_uri . '/assets/img/favicon/favicon.svg">';
+}
+add_action('wp_head', 'custom_frontend_favicons');
+
 
 // Enqueue the main stylesheet
 function my_custom_theme_enqueue_styles() {
