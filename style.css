@@ -50,11 +50,12 @@ html {
   :root {
     --color-bg: #ffffff;
     --color-primary: #1f2769;
+    --color-secondary: #4169E1;
     --color-text: #1a1a1a;
     --color-text-light: #ffffff;
 
   /* Typografie */
-    --font-base: 'AvenirNextCyr', sans-serif;
+    --font-base: 'JosefineSans', sans-serif;
     --font-size-base: 1rem;
     --line-height-base: 1.6;
 
@@ -124,7 +125,7 @@ header {
     padding: 0;
     display: flex;
     gap: 20px;
-    position: relative; /* oder fixed, wenn du willst */
+    position: relative;
     top: 0;
 }
 

@@ -22,10 +22,14 @@
 - Impressum
 
 ## 3. Bisher umgesetzt
-- Menü registriert & im Header ausgegeben (`wp_nav_menu`)
-- Logo & Favicon über Customizer eingebunden
-- CSS-Grundstruktur vorbereitet (Planung)
-- Functions.php: Menüregistrierung, evtl. Custom Logo Support
+- Menü in functions.php registriert & in header.php ausgegeben (`wp_nav_menu`)
+- Logo über Customizer eingebunden
+- Custom Favicon über functions.php im Frontend und Backend eingebunden
+  - Browserkompatibilität & Responsivität verbessert
+- CSS-Grundstruktur vorbereitet
+  - Kommentare nach Bereich (Header, Menü, Footer, Content)
+  - Browser Reset/Normalisierung einfügen
+- CSS: Safari Rendering-Bug in der WP-Admin Bar korrigiert
 
 ## 3.1 In Progress
 - Templates
@@ -35,37 +39,45 @@
   - header.php
 
 ## 4. Nächste Schritte
-4.1. **CSS-Struktur**
-   - Kommentare nach Bereich (Header, Menü, Footer, Content)
-   - Reset/Normalisierung einfügen
-   - Browser-natives Layout
 4.2. **CSS für Header**
-   - Header & Navigation stylen
-   - Responsive & Retina berücksichtigen
-   - SEO beachten
+  - Header & Navigation stylen
+  - Header fixen und langsam ausfaden beim runterscrollen Transformation in Burger-Menu?
+  - Responsive & Retina berücksichtigen
+  - SEO beachten
+4.2.1 **CSS für Footer**
+  - Impressum & Datenschutz Menü einbauen
+  - Kontakt <h2>
+  - Öffnungszeiten <h2>
+  - Anfahrt <h2>
 4.3. **Template-Hierarchie**
-   - `front-page.php`
-   - `page.php`
-   - `archive.php`
-   - `single.php`
-   - `404.php`
+  - `front-page.php`
+  - `page.php`
+  - `archive.php`
+    - Aktuelles
+  - `single.php`
+    - Leistungen
+    - Team
+    - Praxis
+    - Datenschutz
+    - Footer
+  - `404.php`
 4.4. **Für Später (Lernen)**
    - Eigene Gutenberg-Blocks bauen
    - Blocks nutzen eigenes CSS + Komponenten (mit React und JS bauen)
 4.7. **SEO**
-    - Semantisches HTML (header, nav, main, footer)
-    - Sinnvolle Headings-Struktur (H1–H3)
-    - Pagespeed: kleine Assets, wenig Render-blocking durch CSS/JS
-    - Bilder: WebP, richtige Größen, alt-Texte
-    - Sitemap.xml (per WordPress automatisch)
-    - Saubere Permalink-Struktur
-    - Open Graph Tags für Social Media
+  - Semantisches HTML (header, nav, main, footer)
+  - Sinnvolle Headings-Struktur (H1–H3)
+  - Pagespeed: kleine Assets, wenig Render-blocking durch CSS/JS
+  - Bilder: WebP, richtige Größen, alt-Texte
+  - Sitemap.xml (per WordPress automatisch)
+  - Saubere Permalink-Struktur
+  - Open Graph Tags für Social Media
 4.10. **Launch-Plan & Domain-Übernahme (SEO-sicher)**
-    - Alte Website läuft derzeit auf derselben Domain bei All-Inkl
-    - Neue Website ersetzt die alte vollständig
-    - Ziel: SEO-Werte der bestehenden Domain erhalten
+  - Alte Website läuft derzeit auf derselben Domain bei All-Inkl
+  - Neue Website ersetzt die alte vollständig
+  - Ziel: SEO-Werte der bestehenden Domain erhalten
 
-    ### Was ich beachten muss:
+  ### Was ich beachten muss:
     - URL-Struktur prüfen: wenn möglich identisch lassen
     - Falls neue URLs → 301-Redirect-Liste erstellen (z. B. mit Redirection Plugin)
     - „Suchmaschinen blockieren“ in WP → beim Livegang deaktivieren
